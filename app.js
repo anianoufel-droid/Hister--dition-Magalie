@@ -491,17 +491,29 @@ function checkCardFromURL() {
 // ===============================
 // BOUTON TEST
 // ===============================
-
+ 
 document.addEventListener(
-  "DOMContentLoaded",
-  () => {
-
-    const loginButton =
-      document.getElementById(
-        "loginButton"
-      );
-
-    if (testButton) {
+"DOMContentLoaded",
+() => {
+ 
+const loginButton =
+document.getElementById(
+"loginButton"
+);
+ 
+if (loginButton) {
+loginButton.addEventListener(
+"click",
+loginSpotify
+);
+}
+ 
+const testButton =
+document.getElementById(
+"testButton"
+);
+ 
+if (testButton) {
  
 testButton.addEventListener(
 "click",
@@ -520,42 +532,12 @@ playCard(number);
 );
 }
  
- 
-const playButton =
-document.getElementById(
-"playButton"
-);
- 
-if (playButton) {
- 
-playButton.addEventListener(
-"click",
-async () => {
- 
-if (spotifyPlayer) {
- 
-console.log("BOUTON CLIQUÉ");
- 
-try {
- 
-await spotifyPlayer.togglePlay();
- 
-console.log("togglePlay exécuté");
- 
-} catch (error) {
- 
-console.error(error);
- 
-}
- 
-}
- 
-}
-);
-}
- 
- 
 accessToken =
 localStorage.getItem(
 "spotify_access_token"
+);
+ 
+handleCallback();
+ 
+}
 );
