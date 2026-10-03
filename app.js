@@ -534,7 +534,19 @@ async () => {
  
 if (spotifyPlayer) {
  
+console.log("BOUTON CLIQUÉ");
+ 
+try {
+ 
 await spotifyPlayer.togglePlay();
+ 
+console.log("togglePlay exécuté");
+ 
+} catch (error) {
+ 
+console.error(error);
+ 
+}
  
 }
  
