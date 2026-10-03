@@ -501,47 +501,49 @@ document.addEventListener(
         "loginButton"
       );
 
-    if (loginButton) {
-
-      loginButton.addEventListener(
-        "click",
-        loginSpotify
-      );
-    }
-
-
-    const testButton =
-      document.getElementById(
-        "testButton"
-      );
-
     if (testButton) {
-
-      testButton.addEventListener(
-        "click",
-        () => {
-
-          const number =
-            prompt(
-              "Numéro de carte :"
-            );
-
-          if (number) {
-            playCard(number);
-          }
-
-        }
-      );
-    }
-
-
-    accessToken =
-      localStorage.getItem(
-        "spotify_access_token"
-      );
-
-
-    handleCallback();
-
-  }
+ 
+testButton.addEventListener(
+"click",
+() => {
+ 
+const number =
+prompt(
+"Numéro de carte :"
+);
+ 
+if (number) {
+playCard(number);
+}
+ 
+}
+);
+}
+ 
+ 
+const playButton =
+document.getElementById(
+"playButton"
+);
+ 
+if (playButton) {
+ 
+playButton.addEventListener(
+"click",
+async () => {
+ 
+if (spotifyPlayer) {
+ 
+await spotifyPlayer.togglePlay();
+ 
+}
+ 
+}
+);
+}
+ 
+ 
+accessToken =
+localStorage.getItem(
+"spotify_access_token"
 );
