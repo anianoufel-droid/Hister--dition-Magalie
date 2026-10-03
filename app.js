@@ -491,53 +491,57 @@ function checkCardFromURL() {
 // ===============================
 // BOUTON TEST
 // ===============================
- 
+
 document.addEventListener(
-"DOMContentLoaded",
-() => {
- 
-const loginButton =
-document.getElementById(
-"loginButton"
-);
- 
-if (loginButton) {
-loginButton.addEventListener(
-"click",
-loginSpotify
-);
-}
- 
-const testButton =
-document.getElementById(
-"testButton"
-);
- 
-if (testButton) {
- 
-testButton.addEventListener(
-"click",
-() => {
- 
-const number =
-prompt(
-"Numéro de carte :"
-);
- 
-if (number) {
-playCard(number);
-}
- 
-}
-);
-}
- 
-accessToken =
-localStorage.getItem(
-"spotify_access_token"
-);
- 
-handleCallback();
- 
-}
+  "DOMContentLoaded",
+  () => {
+
+    const loginButton =
+      document.getElementById(
+        "loginButton"
+      );
+
+    if (loginButton) {
+
+      loginButton.addEventListener(
+        "click",
+        loginSpotify
+      );
+    }
+
+
+    const testButton =
+      document.getElementById(
+        "testButton"
+      );
+
+    if (testButton) {
+
+      testButton.addEventListener(
+        "click",
+        () => {
+
+          const number =
+            prompt(
+              "Numéro de carte :"
+            );
+
+          if (number) {
+            playCard(number);
+          }
+
+        }
+      );
+    }
+
+
+    accessToken =
+      localStorage.getItem(
+        "spotify_access_token"
+      );
+
+
+    handleCallback();
+
+  }
 );
