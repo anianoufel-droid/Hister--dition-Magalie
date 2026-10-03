@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+
+>
+
+  <title>NoelHits 🎵</title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+</head>
+
+<body>
+
+  <main class="container">
+
+```
+<div class="logo">
+  🎄
+</div>
+
+<h1>NoelHits</h1>
+
+<p class="subtitle">
+  Le jeu musical de Noël
+</p>
+
+<!-- CONNEXION -->
+
+<section id="loginSection">
+
+  <button
+    id="loginButton"
+    class="primary-button"
+  >
+    🎵 Se connecter à Spotify
+  </button>
+
+  <p class="small-text">
+    Connecte le compte Spotify qui sera utilisé
+    pour faire jouer les chansons.
+  </p>
+
+</section>
+
+
+<!-- APPLICATION -->
+
+<section
+  id="app"
+  class="hidden"
+>
+
+  <div class="status">
+
+    <span
+      id="statusDot"
+      class="status-dot"
+    >
+      ●
+    </span>
+
+    <span id="statusText">
+      Connexion à Spotify...
+    </span>
+
+  </div>
+
+
+  <!-- LECTEUR -->
+
+  <div class="player">
+
+    <div
+      id="albumPlaceholder"
+      class="album-placeholder"
+    >
+      🎵
+    </div>
+
+    <img
+      id="albumImage"
+      class="album-image hidden"
+      alt="Pochette de l'album"
+    >
+
+    <h2 id="songTitle">
+      Aucune chanson
+    </h2>
+
+    <p id="artistName">
+      Scanne une carte pour commencer
+    </p>
+
+
+    <button
+      id="playButton"
+      class="primary-button"
+    >
+      ▶️ Lecture / Pause
+    </button>
+
+  </div>
+
+
+  <!-- SCANNER -->
+
+  <div class="scanner">
+
+    <h2>
+      📱 Scanner une carte
+    </h2>
+
+    <p>
+      Scanne le QR code d'une carte
+      pour faire jouer la chanson.
+    </p>
+
+    <button
+      id="testButton"
+      class="secondary-button"
+    >
+      🎶 Tester une carte
+    </button>
+
+  </div>
+
+
+  <!-- INFORMATIONS -->
+
+  <div class="info">
+
+    <p>
+      🎧 Le lecteur Spotify sera installé
+      sur cet ordinateur.
+    </p>
+
+    <p>
+      📱 Le cellulaire pourra ensuite
+      servir de scanner.
+    </p>
+
+  </div>
+
+</section>
+```
+
+  </main>
+
+  <!-- Spotify Web Playback SDK -->
+
+  <script src="https://sdk.scdn.co/spotify-player.js"></script>
+
+  <!-- Notre application -->
+
+<script src="https://sdk.scdn.co/spotify-player.js"></script>
+<script src="app.js"></script>
+
+</body>
+
+</html>
