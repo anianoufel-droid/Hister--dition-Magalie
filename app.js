@@ -1,7 +1,7 @@
 const CLIENT_ID = "6574f3a475c2434b912779d5d0425890";
 
 const REDIRECT_URI =
-  "https://aianoufel-lab.github.io/Hister--dition-Magalie/";
+  "https://anianoufel-lab.github.io/Hister--dition-Magalie/";
 
 const SCOPES = [
   "streaming",
