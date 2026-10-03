@@ -1,7 +1,7 @@
 const CLIENT_ID = "6574f3a475c2434b912779d5d0425890";
 
 const REDIRECT_URI =
-  "https://sahranoufel2000-lab.github.io/NoelHits/";
+  "https://anianoufel-droid-lab.github.io/Hister--dition-Magalie/";
 
 const SCOPES = [
   "streaming",
