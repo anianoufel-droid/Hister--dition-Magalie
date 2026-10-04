@@ -287,7 +287,9 @@ function startSpotifyPlayer() {
           "Spotify est prêt 🎵";
       }
 
-      checkCardFromURL();
+      setTimeout(() => {
+checkCardFromURL();
+}, 3000);
     }
   );
 
