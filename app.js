@@ -470,6 +470,8 @@ async function playCard(cardNumber) {
 
 function checkCardFromURL() {
 
+  console.log("checkCardFromURL exécutée");
+
   const params =
     new URLSearchParams(
       window.location.search
