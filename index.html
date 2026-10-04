@@ -1,170 +1,57 @@
 <!DOCTYPE html>
-
 <html lang="fr">
-
 <head>
   <meta charset="UTF-8">
-
-<meta
-name="viewport"
-content="width=device-width, initial-scale=1.0"
-
->
-
-  <title>NoelHits 🎵</title>
-
-  <link
-    rel="stylesheet"
-    href="style.css"
-  >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hitster · Édition Magalie 💗</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
   <main class="container">
 
-```
-<div class="logo">
-  🎄
-</div>
+    <header>
+      <h1>Hitster</h1>
+      <p class="subtitle">Édition Magalie <span class="heart">💗</span></p>
+    </header>
 
-<h1>NoelHits</h1>
+    <!-- CONNEXION -->
+    <section id="loginSection" class="card">
+      <div class="vinyl small"><div class="label"></div></div>
+      <button id="loginButton" class="primary-button">Se connecter à Spotify</button>
+      <p class="small-text">Connecte le compte Spotify qui fera jouer les chansons.</p>
+    </section>
 
-<p class="subtitle">
-  Le jeu musical de Noël
-</p>
+    <!-- APPLICATION -->
+    <section id="app" class="hidden">
 
-<!-- CONNEXION -->
+      <div class="status">
+        <span id="statusDot" class="status-dot">●</span>
+        <span id="statusText">Connexion à Spotify...</span>
+      </div>
 
-<section id="loginSection">
+      <div class="card player">
+        <div id="albumPlaceholder" class="vinyl"><div class="label"></div></div>
+        <img id="albumImage" class="album-image hidden" alt="">
 
-  <button
-    id="loginButton"
-    class="primary-button"
-  >
-    🎵 Se connecter à Spotify
-  </button>
+        <h2 id="songTitle">Prête à jouer ?</h2>
+        <p id="artistName">Scanne une carte pour lancer une chanson mystère ✨</p>
 
-  <p class="small-text">
-    Connecte le compte Spotify qui sera utilisé
-    pour faire jouer les chansons.
-  </p>
+        <button id="playButton" class="primary-button">⏯ Lecture / Pause</button>
+      </div>
 
-</section>
+      <button id="testButton" class="secondary-button">🎲 Tester une carte</button>
 
+      <p class="tip">💻 Garde cette page ouverte sur l'ordinateur<br>📱 puis scanne les cartes avec ton cellulaire</p>
 
-<!-- APPLICATION -->
-
-<section
-  id="app"
-  class="hidden"
->
-
-  <div class="status">
-
-    <span
-      id="statusDot"
-      class="status-dot"
-    >
-      ●
-    </span>
-
-    <span id="statusText">
-      Connexion à Spotify...
-    </span>
-
-  </div>
-
-
-  <!-- LECTEUR -->
-
-  <div class="player">
-
-    <div
-      id="albumPlaceholder"
-      class="album-placeholder"
-    >
-      🎵
-    </div>
-
-    <img
-      id="albumImage"
-      class="album-image hidden"
-      alt="Pochette de l'album"
-    >
-
-    <h2 id="songTitle">
-      Aucune chanson
-    </h2>
-
-    <p id="artistName">
-      Scanne une carte pour commencer
-    </p>
-
-
-    <button
-      id="playButton"
-      class="primary-button"
-    >
-      ▶️ Lecture / Pause
-    </button>
-
-  </div>
-
-
-  <!-- SCANNER -->
-
-  <div class="scanner">
-
-    <h2>
-      📱 Scanner une carte
-    </h2>
-
-    <p>
-      Scanne le QR code d'une carte
-      pour faire jouer la chanson.
-    </p>
-
-    <button
-      id="testButton"
-      class="secondary-button"
-    >
-      🎶 Tester une carte
-    </button>
-
-  </div>
-
-
-  <!-- INFORMATIONS -->
-
-  <div class="info">
-
-    <p>
-      🎧 Le lecteur Spotify sera installé
-      sur cet ordinateur.
-    </p>
-
-    <p>
-      📱 Le cellulaire pourra ensuite
-      servir de scanner.
-    </p>
-
-  </div>
-
-</section>
-```
+    </section>
 
   </main>
 
-  <!-- Spotify Web Playback SDK -->
-
   <script src="https://sdk.scdn.co/spotify-player.js"></script>
-
-  <!-- Notre application -->
-
-<script src="https://sdk.scdn.co/spotify-player.js"></script>
-<script src="app.js"></script>
+  <script src="app.js"></script>
 
 </body>
-
 </html>
